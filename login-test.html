@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gondor Chic - Connexion</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --dark-brown: #3d2b1f;
+            --border-width: 4px;
+        }
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Uncial Antiqua', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* --- CONFIGURATION DU FOND --- */
+    background-image: url('image_a0c8ca9c.png'); /* Remplacez par votre source */
+    background-repeat: no-repeat;        /* Empêche la multiplication (mosaïque) */
+    background-position: center center;  /* Centre l'image horizontalement et verticalement */
+
+    background-size: cover;              /* S'adapte à la taille de l'écran sans se déformer */
+    
+    color: var(--dark-brown);
+}
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+        }
+
+        .logo-tree {
+            font-size: 50px;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0 0 40px 0;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 35px;
+            width: 100%;
+        }
+
+        /* Label en survole sur la bordure */
+        .input-group label {
+            position: absolute;
+            top: -12px;
+            left: 25px;
+            background: #e6cc9f; /* Doit matcher exactement la couleur de fond */
+            padding: 0 10px;
+            font-size: 1.2rem;
+            z-index: 1;
+        }
+
+        input[type="text"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background: transparent;
+            border: var(--border-width) solid var(--dark-brown);
+            border-radius: 12px;
+            font-family: 'Uncial Antiqua', serif;
+            font-size: 1.1rem;
+            color: var(--dark-brown);
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #9d866d;
+            opacity: 0.7;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Uncial Antiqua', serif;
+            font-size: 1.8rem;
+            color: #e6cc9f;
+            cursor: pointer;
+            /* Remplacer par votre source d'image pour le bouton bois/sombre */
+            background: var(--dark-brown) url('boutton-fond.png');
+            background-repeat: no-repeat;        /* Empêche la multiplication (mosaïque) */
+            background-position: center center;  /* Centre l'image horizontalement et verticalement */
+
+            background-size: cover;  
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.1s;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Décorations de coins simplifiées */
+        .corner {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Symbole de l'Arbre (Caractère Unicode approchant) -->
+        <div class="logo-tree">ᛟ</div> 
+        
+        <h1>Gondor Chic</h1>
+
+        <form>
+            <div class="input-group">
+                <label for="pseudo">Pseudo</label>
+                <input type="text" id="pseudo" placeholder="Votre pseudo unique">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" placeholder="Votre mot de passe secret">
+            </div>
+
+            <button type="submit">s'identifier</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
